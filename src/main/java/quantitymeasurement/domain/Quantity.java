@@ -61,4 +61,14 @@ public class Quantity<U extends IMeasurable> {
     public int hashCode() {
         return Objects.hash(unit.toBaseUnit(value));
     }
+
+	public char[] divide(Quantity quantity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public char[] subtract(Quantity quantity) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
