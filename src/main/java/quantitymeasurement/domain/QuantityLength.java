@@ -28,7 +28,7 @@ public class QuantityLength {
     }
 
     private double toBase() {
-        return unit.convertToBaseUnit(value);
+        return unit.toBaseUnit(value);
     }
 
     public QuantityLength convertTo(LengthUnit targetUnit) {
@@ -36,7 +36,7 @@ public class QuantityLength {
             throw new IllegalArgumentException("Target unit cannot be null");
 
         double baseValue = this.toBase();
-        double converted = targetUnit.convertFromBaseUnit(baseValue);
+        double converted = targetUnit.fromBaseUnit(baseValue);
 
         return new QuantityLength(converted, targetUnit);
     }
@@ -50,7 +50,7 @@ public class QuantityLength {
             throw new IllegalArgumentException("Null not allowed");
 
         double sumBase = this.toBase() + other.toBase();
-        double result = targetUnit.convertFromBaseUnit(sumBase);
+        double result = targetUnit.fromBaseUnit(sumBase);
 
         return new QuantityLength(result, targetUnit);
     }
