@@ -1,6 +1,10 @@
 package com.apps.quantitymeasurement.domain;
 
 import org.junit.jupiter.api.Test;
+
+import quantitymeasurement.domain.Feet;
+import quantitymeasurement.domain.InvalidFeetException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FeetTest {
