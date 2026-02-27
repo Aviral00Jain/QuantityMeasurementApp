@@ -155,4 +155,9 @@ public class Quantity<U extends IMeasurable> {
     public int hashCode() {
         return Objects.hash(unit.toBase(value));
     }
+
+	public char[] convertTo(TemperatureUnit fahrenheit) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
