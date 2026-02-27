@@ -31,7 +31,7 @@ public class QuantityWeight {
     }
 
     private double toBase() {
-        return unit.toBaseUnit(value);
+        return unit.toBase(value);
     }
 
     public QuantityWeight convertTo(WeightUnit targetUnit) {
@@ -41,7 +41,7 @@ public class QuantityWeight {
         }
 
         double baseValue = this.toBase();
-        double convertedValue = targetUnit.fromBaseUnit(baseValue);
+        double convertedValue = targetUnit.fromBase(baseValue);
 
         return new QuantityWeight(convertedValue, targetUnit);
     }
@@ -57,7 +57,7 @@ public class QuantityWeight {
         }
 
         double sumBase = this.toBase() + other.toBase();
-        double result = targetUnit.fromBaseUnit(sumBase);
+        double result = targetUnit.fromBase(sumBase);
 
         return new QuantityWeight(result, targetUnit);
     }
