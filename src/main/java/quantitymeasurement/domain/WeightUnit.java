@@ -19,5 +19,17 @@ public enum WeightUnit implements IMeasurable{
     public double fromBase(double baseValue) {
         return baseValue / factor;
     }
+
+	@Override
+	public boolean supportsArithmetic() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void validateOperationSupport(String operation) {
+		// TODO Auto-generated method stub
+		
+	}
     
 }
