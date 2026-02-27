@@ -25,4 +25,16 @@ public enum LengthUnit implements IMeasurable {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public boolean supportsArithmetic() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void validateOperationSupport(String operation) {
+		// TODO Auto-generated method stub
+		
+	}
 }
