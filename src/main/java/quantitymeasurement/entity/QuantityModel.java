@@ -1,6 +1,6 @@
 package quantitymeasurement.entity;
 
-import quantitymeasurement.domain.IMeasurable;
+import quantitymeasurement.unit.IMeasurable;
 
 public class QuantityModel<U extends IMeasurable> {
     private double value;
