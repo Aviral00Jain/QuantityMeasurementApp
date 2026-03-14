@@ -32,8 +32,8 @@ public class QuantityMeasurementEntity implements Serializable {
     public String errorMessage;
 
     public QuantityMeasurementEntity(
-            QuantityModel<? extends IMeasurable> thisQuantity,
-            QuantityModel<? extends IMeasurable> thatQuantity,
+            QuantityModel<IMeasurable> thisQuantity,
+            QuantityModel<IMeasurable> thatQuantity,
             String operation) {
 
         if (thisQuantity != null) {
@@ -53,8 +53,8 @@ public class QuantityMeasurementEntity implements Serializable {
 
     // Constructor
     public QuantityMeasurementEntity(
-            QuantityModel<? extends IMeasurable> thisQuantity,
-            QuantityModel<? extends IMeasurable> thatQuantity,
+            QuantityModel<IMeasurable> thisQuantity,
+            QuantityModel<IMeasurable> thatQuantity,
             String operation,
             String result) {
 
@@ -64,10 +64,10 @@ public class QuantityMeasurementEntity implements Serializable {
 
     
     public QuantityMeasurementEntity(
-            QuantityModel<? extends IMeasurable> thisQuantity,
-            QuantityModel<? extends IMeasurable> thatQuantity,
+            QuantityModel<IMeasurable> thisQuantity,
+            QuantityModel<IMeasurable> thatQuantity,
             String operation,
-            QuantityModel<? extends IMeasurable> result) {
+            QuantityModel<IMeasurable> result) {
 
         this(thisQuantity, thatQuantity, operation);
 
@@ -79,8 +79,8 @@ public class QuantityMeasurementEntity implements Serializable {
     }
 
     public QuantityMeasurementEntity(
-            QuantityModel<? extends IMeasurable> thisQuantity,
-            QuantityModel<? extends IMeasurable> thatQuantity,
+            QuantityModel<IMeasurable> thisQuantity,
+            QuantityModel<IMeasurable> thatQuantity,
             String operation,
             String errorMessage,
             boolean isError) {
