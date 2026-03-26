@@ -15,7 +15,7 @@ public class QuantityDTO {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	public Object getMeasurementType() {
+	 Object getMeasurementType() {
 		// TODO Auto-generated method stub
 		return null;
 	}
