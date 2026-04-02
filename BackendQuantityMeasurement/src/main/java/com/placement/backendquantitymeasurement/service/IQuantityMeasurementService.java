@@ -1,10 +1,34 @@
 package com.placement.backendquantitymeasurement.service;
 
-import com.placement.backendquantitymeasurement.dto.*;
+import java.util.List;
+
+import com.placement.backendquantitymeasurement.dto.QuantityDTO;
+import com.placement.backendquantitymeasurement.dto.QuantityMeasurementDTO;
 
 public interface IQuantityMeasurementService {
+    QuantityMeasurementDTO compare(QuantityDTO thisQuantityDTO, QuantityDTO thatQuantityDTO);
 
-    QuantityMeasurementDTO compare(QuantityDTO a, QuantityDTO b);
+    QuantityMeasurementDTO convert(QuantityDTO thisQuantityDTO, QuantityDTO thatQuantityDTO);
 
-    QuantityMeasurementDTO add(QuantityDTO a, QuantityDTO b);
+    QuantityMeasurementDTO add(QuantityDTO thisQuantityDTO, QuantityDTO thatQuantityDTO);
+
+    QuantityMeasurementDTO add(QuantityDTO thisQuantityDTO, QuantityDTO thatQuantityDTO, QuantityDTO targetUnitDTO);
+
+    QuantityMeasurementDTO subtract(QuantityDTO thisQuantityDTO, QuantityDTO thatQuantityDTO);
+
+    QuantityMeasurementDTO subtract(QuantityDTO thisQuantityDTO, QuantityDTO thatQuantityDTO, QuantityDTO targetUnitDTO);
+
+    QuantityMeasurementDTO divide(QuantityDTO thisQuantityDTO, QuantityDTO thatQuantityDTO);
+
+    // Get operation history by operation type - ADD, COMPARE
+    List<QuantityMeasurementDTO> getOperationHistory(String operation);
+
+    // Get history by measurement type (LengthUnit, WeightUnit
+    List<QuantityMeasurementDTO> getMeasurementsByType(String type);
+
+    // Get count of successful operations
+    long getOperationCount(String operation);
+
+    // Get all failed/error operations
+    List<QuantityMeasurementDTO> getErrorHistory();
 }
