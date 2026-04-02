@@ -1,4 +1,4 @@
- package com.placement.backendquantitymeasurement;
+package com.placement.backendquantitymeasurement;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BackendQuantityMeasurementApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(BackendQuantityMeasurementApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(BackendQuantityMeasurementApplication.class, args);
+	}
 
 }
